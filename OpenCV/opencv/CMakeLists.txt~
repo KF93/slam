@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8)
+project(opencv)
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CXX_FLAGS "-std=c++11 -o3")
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(opencv 1.51.cpp 1.52.cpp 1.53.cpp 1.54.cpp 1.61.cpp 1.62.cpp 1.6.cpp)
+target_link_libraries(opencv ${OpenCV_LIBS})
+

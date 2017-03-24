@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 			cout<<matrix_23(i,j)<<"\t";
 		cout<<endl;
 	}
-    //矩阵与向量相乘
+        //矩阵与向量相乘
 	v_3d<<3,2,1;
 	vd_3d<<4,5,6;
 	Eigen::Matrix<double,2,1> result=matrix_23.cast<double>()*v_3d;
@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 	cout<<"time use in nomal inverse is"<<1000*(clock()-time_stt)/(double)CLOCKS_PER_SEC<<"ms"<<endl;
 	//矩阵分解求方程
 	time_stt=clock();
-	x=matrix_NN.colPivHouseholderQr().solver(v_Nd);
+	x=matrix_NN.colPivHouseholderQr().solve(v_Nd);
 	cout<<"time use in Qr compsition is"<<1000*(clock()-time_stt)/(double)CLOCKS_PER_SEC<<"ms"<<endl;
 	return 0;  
 }

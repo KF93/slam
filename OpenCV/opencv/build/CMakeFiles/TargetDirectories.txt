@@ -1,0 +1,13 @@
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.51.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.52.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.53.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.54.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.6.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.61.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/1.62.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/3.18.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/Mouse.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/Trackbr.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/hunhe.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/liangdu.dir
+/home/lkf/Code/OpenCV/opencv/build/CMakeFiles/split.dir

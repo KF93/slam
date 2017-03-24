@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+#include<opencv2/core.hpp>
+#include<opencv2/highgui.hpp>
+int main (int argc,char**argv)
+{
+	cv::Mat image,image2,image3;
+	image=cv::imread(argv[1]);
+	image2=cv::imread(argv[2]);
+    if(image.data==nullptr||image2.data==nullptr)
+	{
+		cerr<<"Not find image."<<endl;
+		return 0;
+	}
+	cv::Mat image_clone=image.clone();
+	/**************
+        for(size_t y=0;y!=image2.rows;y++)
+	{
+		for(size_t x=0;x!=image2.cols;y++)
+		{
+			unsigned char* row2_ptr=image2.ptr<unsigned char>(y);
+			unsigned char* data2_ptr=&row2_ptr[x*image2.channels()];
+			unsigned char* row_ptr=image_clone.ptr<unsigned char>(y+20);
+			unsigned char* data_ptr=&row_ptr[(image_clone.cols-image2.cols+x)*image_clone.channels()];
+			for(int c=0;c!=image2.channels();c++)
+			{
+				data_ptr[c]=data2_ptr[c];
+			}
+			
+		}
+	}
+        ******************/
+         
+        cv::Mat imageROI=image_clone(cv::Rect(image_clone.cols-image2.cols-3,175,image2.cols,image2.rows));
+        cv::addWeighted(imageROI,0.3,image2,0.80,0.,imageROI);
+        //cv::Mat mask=cv::imread(argv[2],0);
+        //image2.copyTo(imageROI,mask);
+	cv::imshow("image",image_clone);
+	cv::imwrite("output2.jpg",image_clone);
+	return 0;
+}
