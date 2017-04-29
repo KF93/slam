@@ -32,7 +32,7 @@ int main (int argc,char**argv)
         ******************/
          
         cv::Mat imageROI=image_clone(cv::Rect(image_clone.cols-image2.cols-3,175,image2.cols,image2.rows));
-        cv::addWeighted(imageROI,0.3,image2,0.85,0.,imageROI);
+        cv::addWeighted(imageROI,0.3,image2,0.80,0.,imageROI);
         //cv::Mat mask=cv::imread(argv[2],0);
         //image2.copyTo(imageROI,mask);
 	cv::imshow("image",image_clone);
